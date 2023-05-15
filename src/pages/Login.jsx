@@ -29,9 +29,13 @@ const Login = () => {
     user.password.length > passValid && regexEmail.test(user.email);
 
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
+    <main className='shadow-lg rounded-lg bg-white flex h-screen w-screen
+              items-center justify-center bg-transparent' >
+      <form 
+      className=' bg-slate-100 mt-24 space-y-8 rounded py-10 px-6 md:mt-0 md:max-w-md md:px-14'
+      onSubmit={handleSubmit}>
         <FormRow
+         
           type='email'
           labelText='Email'
           name='email'
@@ -46,7 +50,9 @@ const Login = () => {
           handleChange={handleChange}
         />
 
-        <button type='submit' disabled={!isValid}>
+        <button 
+        className='ml-2  mt-4 border-2 border-cyan-900 p-2 text-cyan-900 hover:text-white hover:bg-cyan-900 rounded-lg flex'
+        type='submit' disabled={!isValid}>
           Login
         </button>
       </form>
